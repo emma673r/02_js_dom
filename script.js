@@ -34,3 +34,8 @@ console.log(p);
 console.log(footer);
 console.log(main);
 console.log(header);
+
+h1.textContent = "Noget andet";
+
+firstH3.innerHTML = "noget andet igen til først h3";
+secondH3.innerHTML = "noget andet igen til anden h3";
