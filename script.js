@@ -39,3 +39,8 @@ h1.textContent = "Noget andet";
 
 firstH3.innerHTML = "noget andet igen til først h3";
 secondH3.innerHTML = "noget andet igen til anden h3";
+
+img1.setAttribute("src", "https://placeimg.com/640/480/arch");
+img1.setAttribute("alt", "placeholder architecture");
+img2.setAttribute("src", "https://placeimg.com/640/480/people");
+img2.setAttribute("alt", "placeholder people");
