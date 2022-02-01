@@ -1,3 +1,5 @@
+// 2A
+
 const h1 = document.querySelector("h1:first-child");
 const h2 = document.querySelector("h2:first-child");
 
@@ -38,16 +40,21 @@ console.log(main);
 console.log(header);
 console.log(section);
 
+// 2B
+
 h1.textContent = "Noget andet";
 
 firstH3.innerHTML = "noget andet igen til først h3";
 secondH3.innerHTML = "noget andet igen til anden h3";
+
+// 3
 
 img1.setAttribute("src", "https://placeimg.com/640/480/arch");
 img1.setAttribute("alt", "placeholder architecture");
 img2.setAttribute("src", "https://placeimg.com/640/480/people");
 img2.setAttribute("alt", "placeholder people");
 
+// 4
 
 const article3 = document.createElement("article");
 section.appendChild(article3);
@@ -55,18 +62,35 @@ section.appendChild(article3);
 article3.setAttribute("id", "article_3");
 
 const thirdH3 = document.createElement("h3");
-thirdH3.innerHTML = "title til article 3"
-article3.appendChild(thirdH3)
+thirdH3.innerHTML = "title til article 3";
+article3.appendChild(thirdH3);
 
 const img3 = document.createElement("img");
 img3.setAttribute("src", "https://placeimg.com/640/480/arch");
 article3.appendChild(img3);
 
 const p3 = document.createElement("p");
-p3.textContent = "lorem lorem lorem blabla"
+p3.textContent = "lorem lorem lorem blabla";
 article3.appendChild(p3);
+
+// 5
 
 document.addEventListener("DOMContentLoaded", start);
 function start() {
-    console.log("it loaded");
+  console.log("it loaded");
 }
+
+// 6
+
+let tal = Math.round(Math.random() * 10);
+console.log(tal);
+
+img1.addEventListener("click", picClicked);
+
+function picClicked() { 
+   img1.src = "https://placeimg.com/640/480/poeple" + tal;
+   console.log(img1.src)
+
+   tal = Math.round(Math.random() * 10);
+}
+
