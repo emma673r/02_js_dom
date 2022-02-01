@@ -13,15 +13,17 @@ let images = [
   "img8.png",
 ];
 
-btn.addEventListener("click", næsteBillede);
-
-function næsteBillede() {
+btn.addEventListener("click", nextPic);
+function nextPic() {
+  console.log("tallet er " + tal);
+  btn.textContent = "næste";
   if (tal < 7) {
     tal++;
     console.log(images[tal]);
     img.src = "billeder/" + images[tal];
-  } else {
-    tal = 0;
-    img.src = "billeder/" + images[tal];
+  }
+  if (tal == 7) {
+    btn.textContent = "Start forfra";
+    tal = -1;
   }
 }
