@@ -65,3 +65,8 @@ article3.appendChild(img3);
 const p3 = document.createElement("p");
 p3.textContent = "lorem lorem lorem blabla"
 article3.appendChild(p3);
+
+document.addEventListener("DOMContentLoaded", start);
+function start() {
+    console.log("it loaded");
+}
