@@ -7,6 +7,8 @@ const h3 = document.querySelectorAll("h3:nth-child(2)");
 const firstH3 = document.querySelector("#article_1 h3:nth-child(2)");
 const secondH3 = document.querySelector("#article_2 h3:nth-child(2)");
 
+// const mitArray = ["#article_1", "#article_2", "#article_3"];
+
 const article1 = document.querySelector("article:first-child");
 const article2 = document.querySelector("article:nth-child(2)");
 
@@ -54,30 +56,31 @@ img1.setAttribute("alt", "placeholder architecture");
 img2.setAttribute("src", "https://placeimg.com/640/480/people");
 img2.setAttribute("alt", "placeholder people");
 
-// 4
-
-const article3 = document.createElement("article");
-section.appendChild(article3);
-
-article3.setAttribute("id", "article_3");
-
-const thirdH3 = document.createElement("h3");
-thirdH3.innerHTML = "title til article 3";
-article3.appendChild(thirdH3);
-
-const img3 = document.createElement("img");
-img3.setAttribute("src", "https://placeimg.com/640/480/arch");
-article3.appendChild(img3);
-
-const p3 = document.createElement("p");
-p3.textContent = "lorem lorem lorem blabla";
-article3.appendChild(p3);
-
 // 5
 
 document.addEventListener("DOMContentLoaded", start);
 function start() {
   console.log("it loaded");
+  // 4
+
+  const article3 = document.createElement("article");
+  section.appendChild(article3);
+
+  article3.setAttribute("id", "article_3");
+
+  const thirdH3 = document.createElement("h3");
+  thirdH3.innerHTML = "title til article 3";
+  article3.appendChild(thirdH3);
+
+  const img3 = document.createElement("img");
+  img3.setAttribute("src", "https://placeimg.com/640/480/arch");
+  article3.appendChild(img3);
+
+  const p3 = document.createElement("p");
+  p3.textContent = "lorem lorem lorem blabla";
+  article3.appendChild(p3);
+
+  markerArtikler();
 }
 
 // 6
@@ -87,10 +90,29 @@ console.log(tal);
 
 img1.addEventListener("click", picClicked);
 
-function picClicked() { 
-   img1.src = "https://placeimg.com/640/480/poeple" + tal;
-   console.log(img1.src)
+function picClicked() {
+  img1.src = "https://placeimg.com/640/480/poeple" + tal;
+  console.log(img1.src);
 
-   tal = Math.round(Math.random() * 10);
+  tal = Math.round(Math.random() * 10);
 }
 
+// 7
+function markerArtikler() {
+  const articles = document.querySelectorAll("article");
+console.log(articles);
+// mitArray.forEach(visNavn);
+articles.forEach(marker);
+}
+
+
+
+function visNavn(elm) {
+  console.log(elm);
+}
+
+// mitArray.forEach(marker);
+
+function marker(artikel) {
+  artikel.classList.add("markering");
+}
